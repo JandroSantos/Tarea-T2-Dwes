@@ -2,10 +2,11 @@
  
 class TriangleGenerator{
  
+    private $result="";
  
 public function generate_triangle(int $altura): String{
  
-    echo "<pre>";
+    $this->result .= "<pre>";
  
 if (!($altura % 2)) {
     $altura++;
@@ -15,15 +16,15 @@ for ($i=0; $i<$altura; $i++){
     if (!($i % 2)) {
  
         for ($j=0; $j<($altura-$i)/2; $j++){
-            echo "&nbsp;";
+            $this->result .= "&nbsp;";
         }
             for ($k=0; $k<=$i; $k++){
-            echo "*";
+            $this->result .= "*";
         }
-            echo "<br>";
+        $this->result .= "<br>";
     }
 }
-echo "</pre>";
-return "";
+$this->result .= "</pre>";
+return $this->result;
 }
 }

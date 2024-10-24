@@ -11,7 +11,7 @@
 include "clases/triangleGenerator.php";
  
 $triangulo = new TriangleGenerator();
-$triangulo->generate_triangle(6);
+echo $triangulo->generate_triangle(6);
  
 ?>
  
