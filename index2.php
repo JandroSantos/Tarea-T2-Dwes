@@ -96,6 +96,6 @@ foreach ($asignaturasConAlumnos as $asignatura) {
     echo "<li>$asignatura</li>";
 }
 echo "</ul>";
-?>
+ ?>
 </body>
 </html>
