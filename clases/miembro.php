@@ -1,44 +1,21 @@
 <?php 
 
-abstract class Miembros {
+abstract class Miembro {
 
 private int $id;
 
-private $name;
+protected $nombre;
 
-private $apellidos;
+protected $apellidos;
 
-private $email;
+protected $email;
 
-private int $edad;
 
-public function __construct(int $id, string $name, string $apellidos, string $email, int $edad) {
+public function __construct($id, $nombre, $apellidos, $email) {
     $this->id = $id;
-    $this->name = $name;
+    $this->nombre = $nombre;
     $this->apellidos = $apellidos;
     $this->email = $email;
-    $this->edad = $edad;
-}
-
-
-/**
- * Get the value of edad
- */ 
-public function getEdad()
-{
-return $this->edad;
-}
-
-/**
- * Set the value of edad
- *
- * @return  self
- */ 
-public function setEdad($edad)
-{
-$this->edad = $edad;
-
-return $this;
 }
 
 /**
@@ -82,21 +59,21 @@ return $this;
 }
 
 /**
- * Get the value of name
+ * Get the value of nombre
  */ 
-public function getName()
+public function getnombre()
 {
-return $this->name;
+return $this->nombre;
 }
 
 /**
- * Set the value of name
+ * Set the value of nombre
  *
  * @return  self
  */ 
-public function setName($name)
+public function setnombre($nombre)
 {
-$this->name = $name;
+$this->nombre = $nombre;
 
 return $this;
 }
@@ -119,5 +96,9 @@ public function setId($id)
 $this->id = $id;
 
 return $this;
+}
+
+public function __toString() {
+    return $this->id . " " . $this->nombre . " " . $this->apellidos . " " . $this->email;
 }
 }
